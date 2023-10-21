@@ -12,14 +12,14 @@ class Principal{
         //Encabezado de vehiculos
         String[] encabezadoVehiculos = new String[] {"Id","Tipo","Color","Combustible","Disponible","Asegurado","Cliente","Precio"};
         //Definimos arreglo de vehiculos
-        Vehiculo[] vehiculos = new Vehiculo[10];
+        Vehiculo[] vehiculos = new Vehiculo[100];
 
         //Inicializamos vehiculos
         int contadorVehiculo = 3;
         vehiculos = inicializarVehiculos(vehiculos);
 
         //Definimos arreglo de clientes
-        Cliente[] clientes = new Cliente[10];
+        Cliente[] clientes = new Cliente[100];
         //Encabezado de clientes
         String[] encabezadoClientes = new String[] {"Id","Tipo Persona","Lugar Residencia","Direccion Exacta","Numero Tarjeta","Tipo Tarjeta","Nombre Cliente"};
 
@@ -132,7 +132,7 @@ class Principal{
                 //Solicitamos precio
                 int precio = Utilidades.getInt(1,"Digite precio: ");
                 //Agregamos vehiculo
-                vehiculos[contadorVehiculo] = new Vehiculo(contadorVehiculo,tipoVehiculo[tipo-1].substring(2),coloresVehiculo[color-1].substring(2),tipoCombustible[combustible-1].substring(2),"Si","No","Ninguno",precio);
+                vehiculos[contadorVehiculo] = new Vehiculo(contadorVehiculo+1,tipoVehiculo[tipo-1].substring(2),coloresVehiculo[color-1].substring(2),tipoCombustible[combustible-1].substring(2),"Si","No","Ninguno",precio);
                 contadorVehiculo++;
                 break;
                 //Consultar monto recaudado
